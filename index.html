@@ -1,40 +1,47 @@
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:system-ui,sans-serif;background:#f4f6f0;min-height:100vh;padding:1.5rem 1rem}
-.card{background:#fff;border-radius:14px;max-width:620px;margin:0 auto;padding:2rem 1.75rem;border:1px solid #dde6d5}
-.logos{display:flex;justify-content:space-between;align-items:center;padding-bottom:1.25rem;border-bottom:1px solid #e8f0e0;margin-bottom:1.5rem;flex-wrap:wrap;gap:12px}
-.logo-mantiqueira{line-height:1.1;text-align:center}
-.logo-mantiqueira .top{font-size:15px;font-weight:800;letter-spacing:.5px}
-.logo-mantiqueira .top span:first-child{color:#1a5c1a}
-.logo-mantiqueira .top span:last-child{color:#6abf40}
-.logo-mantiqueira .bottom{font-size:11px;font-weight:700;color:#1a5c1a;letter-spacing:2px}
-.hero{text-align:center;margin-bottom:1.75rem}
-.hero h1{font-size:19px;font-weight:700;color:#1a5c1a;margin-bottom:6px}
-.hero p{font-size:13.5px;color:#555;line-height:1.6;max-width:480px;margin:0 auto}
-.section-title{font-size:13px;font-weight:700;color:#6abf40;text-transform:uppercase;letter-spacing:.8px;margin:1.5rem 0 .75rem;padding-bottom:4px;border-bottom:2px solid #e8f5e2}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.field{display:flex;flex-direction:column;gap:5px}
-.field.full{grid-column:1/-1}
-label{font-size:12.5px;font-weight:600;color:#2d4a2d}
-label .req{color:#e25c3d}
-input,select{padding:9px 11px;border:1.5px solid #cddcc5;border-radius:8px;font-size:14px;color:#222;background:#fff;outline:none;transition:border-color .15s}
-input:focus,select:focus{border-color:#3B6D11}
-input::placeholder{color:#aaa}
-.radio-group{display:flex;gap:10px;flex-wrap:wrap}
-.radio-opt{display:flex;align-items:center;gap:6px;cursor:pointer;font-size:13.5px;color:#333}
-.radio-opt input{width:16px;height:16px;accent-color:#3B6D11;cursor:pointer}
-.btn{width:100%;padding:13px;background:#1a5c1a;color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;margin-top:1.5rem;letter-spacing:.3px;transition:background .15s}
-.btn:hover{background:#154a15}
-.success{display:none;text-align:center;padding:2.5rem 1rem}
-.success .check{font-size:52px;margin-bottom:1rem}
-.success h2{font-size:20px;color:#1a5c1a;font-weight:700;margin-bottom:.5rem}
-.success p{font-size:14px;color:#555;line-height:1.6}
-.err{font-size:11.5px;color:#e25c3d;margin-top:2px;display:none}
-@media(max-width:480px){.grid{grid-template-columns:1fr}.field.full{grid-column:1}}
-</style>
-
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PSA — Pré-Cadastro de Propriedades Rurais</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,sans-serif;background:#f4f6f0;min-height:100vh;padding:1.5rem 1rem}
+    .card{background:#fff;border-radius:14px;max-width:620px;margin:0 auto;padding:2rem 1.75rem;border:1px solid #dde6d5}
+    .logos{display:flex;justify-content:space-between;align-items:center;padding-bottom:1.25rem;border-bottom:1px solid #e8f0e0;margin-bottom:1.5rem;flex-wrap:wrap;gap:12px}
+    .logos img{height:50px;object-fit:contain}
+    .hero{text-align:center;margin-bottom:1.75rem}
+    .hero h1{font-size:19px;font-weight:700;color:#1a5c1a;margin-bottom:6px}
+    .hero p{font-size:13.5px;color:#555;line-height:1.6;max-width:480px;margin:0 auto}
+    .section-title{font-size:13px;font-weight:700;color:#6abf40;text-transform:uppercase;letter-spacing:.8px;margin:1.5rem 0 .75rem;padding-bottom:4px;border-bottom:2px solid #e8f5e2}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .field{display:flex;flex-direction:column;gap:5px}
+    .field.full{grid-column:1/-1}
+    label{font-size:12.5px;font-weight:600;color:#2d4a2d}
+    label .req{color:#e25c3d}
+    input,select{padding:9px 11px;border:1.5px solid #cddcc5;border-radius:8px;font-size:14px;color:#222;background:#fff;outline:none;transition:border-color .15s}
+    input:focus,select:focus{border-color:#3B6D11}
+    input::placeholder{color:#aaa}
+    .radio-group{display:flex;gap:10px;flex-wrap:wrap}
+    .radio-opt{display:flex;align-items:center;gap:6px;cursor:pointer;font-size:13.5px;color:#333}
+    .radio-opt input{width:16px;height:16px;accent-color:#3B6D11;cursor:pointer}
+    .btn{width:100%;padding:13px;background:#1a5c1a;color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;margin-top:1.5rem;letter-spacing:.3px;transition:background .15s}
+    .btn:hover{background:#154a15}
+    .success{display:none;text-align:center;padding:2.5rem 1rem}
+    .success .check{font-size:52px;margin-bottom:1rem}
+    .success h2{font-size:20px;color:#1a5c1a;font-weight:700;margin-bottom:.5rem}
+    .success p{font-size:14px;color:#555;line-height:1.6}
+    .err{font-size:11.5px;color:#e25c3d;margin-top:2px;display:none}
+    @media(max-width:480px){.grid{grid-template-columns:1fr}.field.full{grid-column:1}}
+  </style>
+</head>
+<body>
 <div class="card">
 
+  <div class="logos">
+    <img src="logo-agencia-pcj.jpg" alt="Agência das Bacias PCJ">
+    <img src="logo-agroflorestal-mantiqueira.jpeg" alt="Agroflorestal Mantiqueira">
+  </div>
 
   <div class="hero">
     <h1>Programa de Pagamento por Serviços Ambientais</h1>
@@ -158,7 +165,7 @@ function fmt(v,type){
 }
 document.getElementById('cpf').oninput=function(){this.value=fmt(this.value,'cpf')};
 document.getElementById('tel').oninput=function(){this.value=fmt(this.value,'tel')};
-function show(id,show){document.getElementById(id).style.display=show?'block':'none'}
+function show(id,v){document.getElementById(id).style.display=v?'block':'none'}
 function toggleFossa(el){document.getElementById('qtd-fossa').style.display=el.value==='Sim'?'flex':'none'}
 function enviar(){
   let ok=true;
